@@ -21,3 +21,5 @@ Download the latest binary from https://github.com/magicsgram/KyleCaptureTransla
 4. Click "Capture" button on top-left corner
 5. Capture a part of the screen by drawing a rectangle with your mouse
 6. The Google Translated result should show up to the right:)
+
+Windows 10 OCR only works for the language that users've installed. Go to settings -> Region & Language and add more languages if you want to OCR those languages.
