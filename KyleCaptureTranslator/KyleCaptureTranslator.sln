@@ -7,14 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KyleCaptureTranslator", "Ky
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7BEB7E2F-7159-48D3-BB23-EEB9B69B20E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BEB7E2F-7159-48D3-BB23-EEB9B69B20E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BEB7E2F-7159-48D3-BB23-EEB9B69B20E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BEB7E2F-7159-48D3-BB23-EEB9B69B20E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BEB7E2F-7159-48D3-BB23-EEB9B69B20E0}.Debug|x64.ActiveCfg = Debug|x64
+		{7BEB7E2F-7159-48D3-BB23-EEB9B69B20E0}.Debug|x64.Build.0 = Debug|x64
+		{7BEB7E2F-7159-48D3-BB23-EEB9B69B20E0}.Release|x64.ActiveCfg = Debug|x64
+		{7BEB7E2F-7159-48D3-BB23-EEB9B69B20E0}.Release|x64.Build.0 = Debug|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

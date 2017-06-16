@@ -3,10 +3,37 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         xmlns:local="clr-namespace:KyleCaptureTranslator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="KyleCaptureTranslator 1.1" MinHeight="500" MinWidth="550">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="35"/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+    <Button Grid.Row="0" Content="Capture" Width="200" HorizontalAlignment="Left" Margin="3" ClickMode="Press" Click="OnCaptureButton_Click"/>
+    <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0, 3, 50, 3" HorizontalAlignment="Right" VerticalAlignment="Center">
+      <Label Content="Translate "/>
+      <ComboBox Name="sourceLanguageComboBox" SelectedIndex="0" ItemsSource="{Binding OCRLanguages}" DisplayMemberPath="DisplayName" SelectionChanged="OnSourceLanguageComboBox_SelectionChanged"/>
+      <Label Content=" to "/>
+      <ComboBox Name="destinationLanguageComboBox" SelectedIndex="1" ItemsSource="{Binding GoogleLanguageTags.Keys}" SelectionChanged="OnDestinationLanguageComboBox_SelectionChanged" SelectedValuePath="Value"/>
+    </StackPanel>
+    <Grid Grid.Row="1">
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition MinWidth="50"/>
+          <ColumnDefinition Width="5"/>
+          <ColumnDefinition MinWidth="300"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="DarkGray">
+          <Image Name="captureImage"/>
+        </Grid>
+        <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black"/>
+        <Grid Grid.Column="2" Background="DarkGray">
+          <cefSharp:ChromiumWebBrowser Name="browser"/>
+        </Grid>
+      </Grid>
     </Grid>
+  </Grid>
 </Window>
